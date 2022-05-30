@@ -31,7 +31,8 @@ mean <- aggregate(x=cfc.h$attendance,
                   FUN=mean) 
 view(mean)
 
-#data viz, colo black= #353436, color blue = #1b98e0
+#data viz
+#personal note, fill color black= #353436, color blue = #1b98e0
 
 library(ggplot2)
 
