@@ -21,11 +21,11 @@ cfc.h=filter(cfc, attendance!="") %>%
 cf <- dplyr::filter(matches, away == "Chicago Fire FC")
 
 cfc.a=filter(cf, attendance!="") %>%
-  group_by(home, away) %>%
+  group_by(home, away, date, year) %>%
   summarize(attendance, .groups="drop")
 
 
                    
-
+view(cfc.a)
   
   
