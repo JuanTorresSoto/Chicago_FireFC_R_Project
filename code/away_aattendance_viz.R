@@ -29,8 +29,10 @@ cfc.a=filter(cf, attendance!="") %>%
 mean <- aggregate(x=cfc.a$attendance,
           by=list(cfc.a$home,cfc.a$away),
           FUN=mean) 
+view(mean)
 
-#data viz, colo black= #353436, color blue = #1b98e0
+#data viz
+#personal note, fill color black= #353436, color blue = #1b98e0
 
 library(ggplot2)
 
@@ -41,4 +43,4 @@ ggplot(mean, aes(x = Group.1, y = x)) +
   geom_bar(stat = "identity", fill="#1b98e0", colour="red") +
   xlab("Home Teams") +
   ylab("Attendance") + 
-  ggtitle("Chicago Fire FC Away ")
+  ggtitle("Chicago Fire FC Away")
