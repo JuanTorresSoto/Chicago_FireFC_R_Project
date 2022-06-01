@@ -9,9 +9,10 @@ library(skimr)
 
 #load raw data and filter only relevant data.
 
-read_csv("raw_data/matches.csv") 
+read.csv("raw_data/matches.csv") 
 cfc <- dplyr::filter(matches, home == "Chicago Fire FC")
-
+ 
+ 
 cfc.h=filter(cfc, attendance!="") %>% 
   group_by(home, away) %>%
   summarize(attendance, .groups="drop")
