@@ -3,7 +3,6 @@ Home &amp; Away attendance (2008-2022)
 Project 1
 
 ---
-title: "Chicago Fire FC Attendance"
 author: "Juan Torres Soto"
 date: "5/31/2022"
 output: html_document
@@ -66,6 +65,7 @@ mean.h
 ```
 
 #### Home Average Visual 
+Notes: this will show a chart with the average game attendace per team. 
 
 ```{r home data viz, echo=FALSE}
 ggplot(mean.h, aes(x = Group.2, y = x)) +
@@ -84,7 +84,8 @@ ggplot(mean.h, aes(x = Group.2, y = x)) +
 
 ### Away Attendance Average  
 Note: 
-* We will repeat the steps for Home Attendance Average
+* We will repeat the steps for Home Attendance Average.
+* This will show the average match attendance when Chicago Fire are athe visitng team. 
 
 ```{r cleaning the away data, warning=FALSE, include=FALSE}
 cf <- dplyr::filter(ecfc, away == "Chicago Fire FC")
