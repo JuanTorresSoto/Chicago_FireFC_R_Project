@@ -2,7 +2,9 @@
 title: "Chicago Fire FC Attendance"
 author: "Juan Torres Soto"
 date: "5/31/2022"
-output: html_document
+output:
+  html_document: default
+  pdf_document: default
 ---
 
 ## Home & Away Attendance

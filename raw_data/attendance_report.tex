@@ -1,0 +1,260 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\title{Chicago Fire FC Attendance}
+\author{Juan Torres Soto}
+\date{5/31/2022}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Chicago Fire FC Attendance},
+  pdfauthor={Juan Torres Soto},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\begin{document}
+\maketitle
+
+\hypertarget{home-away-attendance}{%
+\subsection{Home \& Away Attendance}\label{home-away-attendance}}
+
+This project includes data from a Major League Soccer Data Set. To view
+the origin of the data that is found in Kaggle click here
+\href{https://www.kaggle.com/datasets/josephvm/major-league-soccer-dataset}{link}.
+It contains:
+
+\begin{itemize}
+\tightlist
+\item
+  Player
+\item
+  Game
+\item
+  Event
+\item
+  Table
+\end{itemize}
+
+data from the MLS. For the purpose of this project, I am only analyzing
+the matches.csv table from game data.
+
+\hypertarget{setting-up-my-enviroment}{%
+\subsection{Setting up my enviroment}\label{setting-up-my-enviroment}}
+
+Notes: setting up my R environment by loading the `tidyverse' package.
+
+\begin{itemize}
+\tightlist
+\item
+  library(tidyverse)
+\item
+  library(readr)
+\item
+  library(dplyr)
+\item
+  library(ggplot2
+\end{itemize}
+
+\hypertarget{home-attendance-average}{%
+\subsubsection{Home Attendance Average}\label{home-attendance-average}}
+
+Notes:
+
+\begin{itemize}
+\tightlist
+\item
+  Load the data
+\item
+  Clean out the data
+\end{itemize}
+
+so we are only looking at the average home recorded attendance vs.~other
+MLS teams.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mean.h}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##            Group.1                Group.2        x
+## 1  Chicago Fire FC      Atlanta United FC 15462.75
+## 2  Chicago Fire FC            CF Montréal  6680.00
+## 3  Chicago Fire FC             Chivas USA 15917.33
+## 4  Chicago Fire FC        Colorado Rapids 13625.60
+## 5  Chicago Fire FC          Columbus Crew 13005.00
+## 6  Chicago Fire FC       Columbus Crew SC 14228.36
+## 7  Chicago Fire FC              DC United 16040.43
+## 8  Chicago Fire FC          FC Cincinnati 11034.00
+## 9  Chicago Fire FC              FC Dallas 13736.50
+## 10 Chicago Fire FC         Houston Dynamo 14995.11
+## 11 Chicago Fire FC         Inter Miami CF 10844.00
+## 12 Chicago Fire FC              LA Galaxy 20940.29
+## 13 Chicago Fire FC                   LAFC 18471.00
+## 14 Chicago Fire FC    Minnesota United FC 14789.50
+## 15 Chicago Fire FC        Montreal Impact 15223.67
+## 16 Chicago Fire FC           Nashville SC 15915.00
+## 17 Chicago Fire FC New England Revolution 14815.59
+## 18 Chicago Fire FC       New York City FC 13891.57
+## 19 Chicago Fire FC     New York Red Bulls 14744.00
+## 20 Chicago Fire FC        Orlando City SC 17419.88
+## 21 Chicago Fire FC     Philadelphia Union 13544.31
+## 22 Chicago Fire FC       Portland Timbers 14585.33
+## 23 Chicago Fire FC         Real Salt Lake 17804.44
+## 24 Chicago Fire FC   San Jose Earthquakes 14987.00
+## 25 Chicago Fire FC    Seattle Sounders FC 14930.50
+## 26 Chicago Fire FC   Sporting Kansas City 14431.11
+## 27 Chicago Fire FC             Toronto FC 16573.42
+## 28 Chicago Fire FC    Vancouver Whitecaps 15341.80
+\end{verbatim}
+
+\hypertarget{home-average-visual}{%
+\paragraph{Home Average Visual}\label{home-average-visual}}
+
+\includegraphics{attendance_report_files/figure-latex/home data viz-1.pdf}
+
+\hypertarget{away-attendance-average}{%
+\subsubsection{Away Attendance Average}\label{away-attendance-average}}
+
+Note: * We will repeat the steps for Home Attendance Average
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{mean.a}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+##                   Group.1         Group.2        x
+## 1       Atlanta United FC Chicago Fire FC 49623.60
+## 2              Chivas USA Chicago Fire FC 16878.00
+## 3         Colorado Rapids Chicago Fire FC 15769.83
+## 4           Columbus Crew Chicago Fire FC 19707.50
+## 5        Columbus Crew SC Chicago Fire FC 16307.29
+## 6             D.C. United Chicago Fire FC 13795.00
+## 7               DC United Chicago Fire FC 15073.33
+## 8           FC Cincinnati Chicago Fire FC 23917.50
+## 9               FC Dallas Chicago Fire FC 14934.40
+## 10         Houston Dynamo Chicago Fire FC 20399.12
+## 11         Inter Miami CF Chicago Fire FC 14584.50
+## 12              LA Galaxy Chicago Fire FC 24320.83
+## 13                   LAFC Chicago Fire FC 22154.00
+## 14    Minnesota United FC Chicago Fire FC 23138.00
+## 15        Montreal Impact Chicago Fire FC 22606.00
+## 16           Nashville SC Chicago Fire FC 13550.00
+## 17 New England Revolution Chicago Fire FC 16867.50
+## 18       New York City FC Chicago Fire FC 22782.43
+## 19     New York Red Bulls Chicago Fire FC 17671.23
+## 20        Orlando City SC Chicago Fire FC 23105.86
+## 21     Philadelphia Union Chicago Fire FC 17196.70
+## 22       Portland Timbers Chicago Fire FC 21751.60
+## 23         Real Salt Lake Chicago Fire FC 19181.20
+## 24   San Jose Earthquakes Chicago Fire FC 14470.43
+## 25    Seattle Sounders FC Chicago Fire FC 37963.20
+## 26   Sporting Kansas City Chicago Fire FC 17301.92
+## 27             Toronto FC Chicago Fire FC 22810.92
+## 28    Vancouver Whitecaps Chicago Fire FC 20654.67
+\end{verbatim}
+
+\hypertarget{away-average-visual}{%
+\paragraph{Away Average Visual}\label{away-average-visual}}
+
+\includegraphics{attendance_report_files/figure-latex/away average visual-1.pdf}
+
+\end{document}
